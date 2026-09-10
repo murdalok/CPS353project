@@ -1,2 +1,19 @@
-.idea/vcs.xml
-.idea/workspace.xml
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Gradle generated files
+.gradle/
+build/
+
+# Java compiled files
+*.class
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
