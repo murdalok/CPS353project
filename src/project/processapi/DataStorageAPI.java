@@ -1,11 +1,13 @@
 package project.processapi;
 
 import project.annotations.ProcessAPI;
+import project.networkapi.InputSource;
+import project.networkapi.OutputDestination;
 
 @ProcessAPI
 public interface DataStorageAPI {
 
-    IntegerData read(DataInputSource inputSource);
+    IntegerData read();
 
-    void write(DataOutputDestination destination, IntegerData data);
+    void write();
 }

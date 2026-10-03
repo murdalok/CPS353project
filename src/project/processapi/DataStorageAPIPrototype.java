@@ -6,17 +6,14 @@ public class DataStorageAPIPrototype {
 
     @ProcessAPIPrototype
     public void prototype(DataStorageAPI storage) {
-        //specify the data input source
-        DataInputSource inputSource = null;
+        // Job handler asks for integer data
+        IntegerData integerData = storage.read();
 
-        //read integer data
-        IntegerData input = storage.read(inputSource);
+        //job Handler provides result
+        IntegerData result;
 
-        //specify output destination
-        DataOutputDestination outputDestination = null;
-
-        //write inter data to data storage
-        storage.write(outputDestination, input);
+        //Job handler asks to store result
+        storage.write();
 
     }
 }

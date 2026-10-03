@@ -6,19 +6,13 @@ public class ComputeEngineAPIPrototype {
 
     @NetworkAPIPrototype
     public void prototype(ComputeEngineAPI computeEngine) {
+        //job arrives from user
+        JobRequest jobRequest;
+        //submit job request to compute engine
+        JobResponse response = computeEngine.submitJobRequest();
 
-        //specify input and output sources
-        InputSource inputSource;
-        OutputDestination outputDestination;
 
-        //specify delimiter or use default if one is not specified
-        Delimiter delimiter;
 
-        //build job request
-        JobRequest jobRequest = null;
-
-        //submit job and get response
-        JobResponse jobResponse = computeEngine.submitJob(jobRequest);
 
     }
 }
