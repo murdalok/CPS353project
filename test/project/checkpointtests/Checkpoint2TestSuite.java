@@ -36,7 +36,7 @@ public class Checkpoint2TestSuite {
 	        Class<? extends Annotation> prototypeAnnotation) throws Exception {
 		int numPrototypesFound = 0;
 		List<String> errors = new ArrayList<>();
-		for (Class<?> clazz : Utils.loadAllClasses()) {
+		for (Class<?> clazz : project.checkpointtests.Utils.loadAllClasses()) {
 			if (!clazz.isInterface() && !clazz.isEnum() && !clazz.isAnnotation()) {
 				for (Method m : clazz.getDeclaredMethods()) {
 					if (m.isAnnotationPresent(prototypeAnnotation)) {
@@ -80,7 +80,7 @@ public class Checkpoint2TestSuite {
 	public void checkAnnotationsExist(Class<? extends Annotation> apiAnnotation) throws Exception {
 		int numApisFound = 0;
 		
-		for (Class<?> clazz : Utils.loadAllClasses()) {
+		for (Class<?> clazz : project.checkpointtests.Utils.loadAllClasses()) {
 			if (clazz.isInterface()) {
 				if (clazz.isAnnotationPresent(apiAnnotation)) {
 				    numApisFound++;

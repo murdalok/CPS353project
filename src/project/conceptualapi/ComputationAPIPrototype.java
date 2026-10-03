@@ -10,5 +10,6 @@ public class ComputationAPIPrototype {
         IntegerData input;
 
        //compute result
+
     }
 }

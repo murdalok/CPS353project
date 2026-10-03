@@ -5,20 +5,14 @@ import project.annotations.NetworkAPIPrototype;
 public class ComputeEngineAPIPrototype {
 
     @NetworkAPIPrototype
-    public void prototype(ComputeEngineAPI computeEngine) {
+    public void prototype(ComputeEngineAPI computeEngine, JobRequest request) {
+        //job arrives from user
 
-        //specify input and output sources
-        InputSource inputSource;
-        OutputDestination outputDestination;
+        //submit job request to compute engine
+        JobResponse response = computeEngine.submitJobRequest(request);
 
-        //specify delimiter or use default if one is not specified
-        Delimiter delimiter;
 
-        //build job request
-        JobRequest jobRequest = null;
 
-        //submit job and get response
-        JobResponse jobResponse = computeEngine.submitJob(jobRequest);
 
     }
 }
