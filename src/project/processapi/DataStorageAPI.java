@@ -7,7 +7,7 @@ import project.networkapi.OutputDestination;
 @ProcessAPI
 public interface DataStorageAPI {
 
-    IntegerData read();
+    IntegerData read(InputSource input);
 
-    void write();
+    void write(OutputDestination output, IntegerData data);
 }
