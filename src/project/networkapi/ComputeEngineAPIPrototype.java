@@ -9,7 +9,7 @@ public class ComputeEngineAPIPrototype {
         //job arrives from user
         JobRequest jobRequest;
         //submit job request to compute engine
-        JobResponse response = computeEngine.submitJobRequest();
+        JobResponse response = computeEngine.submitJobRequest(jobRequest);
 
 
 
