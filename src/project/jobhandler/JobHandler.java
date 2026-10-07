@@ -1,7 +1,11 @@
 package project.jobhandler;
 
 import project.conceptualapi.ComputationAPI;
-import project.networkapi.*;
+import project.networkapi.ComputeEngineAPI;
+import project.networkapi.Delimiter;
+import project.networkapi.InputSource;
+import project.networkapi.JobResponse;
+import project.networkapi.OutputDestination;
 import project.processapi.DataStorageAPI;
 import project.processapi.IntegerData;
 
