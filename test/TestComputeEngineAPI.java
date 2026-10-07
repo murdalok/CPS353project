@@ -2,7 +2,10 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import project.conceptualapi.ComputationAPI;
 import project.jobhandler.JobHandler;
-import project.networkapi.*;
+import project.networkapi.Delimiter;
+import project.networkapi.InputSource;
+import project.networkapi.JobResponse;
+import project.networkapi.OutputDestination;
 import project.processapi.DataStorageAPI;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
