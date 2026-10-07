@@ -6,10 +6,10 @@ public class ComputeEngineAPIPrototype {
 
     @NetworkAPIPrototype
     public void prototype(ComputeEngineAPI computeEngine) {
-        //job arrives from user
-        JobRequest jobRequest;
-        //submit job request to compute engine
-        JobResponse response = computeEngine.submitJobRequest(jobRequest);
+        InputSource  inputSource = new InputSource() {};
+        OutputDestination outputDestination = new OutputDestination() {};
+        Delimiter delimiter = new Delimiter() {};
+        JobResponse response = computeEngine.submitJobRequest(inputSource, outputDestination,delimiter);
 
 
 

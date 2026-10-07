@@ -17,7 +17,7 @@ public class JobHandler implements ComputeEngineAPI {
     }
 
     @Override
-    public JobResponse submitJobRequest(JobRequest jobRequest) {
+    public JobResponse submitJobRequest(InputSource inputSource, OutputDestination outputDestination, Delimiter delimiter) {
         return null;
     }
 }
