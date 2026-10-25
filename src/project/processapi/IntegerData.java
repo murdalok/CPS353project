@@ -1,5 +1,8 @@
 package project.processapi;
+import java.util.List;
 
 public interface IntegerData {
-    //implementation tbd
+
+    List<Integer> getIntegers();
+
 }

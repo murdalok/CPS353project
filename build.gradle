@@ -31,7 +31,7 @@ test {
     useJUnitPlatform()
 
 	filter {
-		excludeTestsMatching("*TestComputationAPI")
+		//excludeTestsMatching("*TestComputationAPI")
 		excludeTestsMatching("*TestComputeEngineAPI")
 		excludeTestsMatching("*TestDataStorageAPI")
 		excludeTestsMatching("*ComputeEngineIntegrationTest")

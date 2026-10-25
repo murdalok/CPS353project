@@ -1,21 +1,32 @@
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import project.IntegerDataset;
 import project.computation.ComputationHandler;
 import project.processapi.IntegerData;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestComputationAPI {
 
     @Test
     public void testCompute() {
 
-        IntegerData input = Mockito.mock(IntegerData.class);
+        IntegerData input = new IntegerDataset(List.of(1, 10, 25));
 
         ComputationHandler computation = new ComputationHandler();
 
         IntegerData result = computation.compute(input);
 
-        assertNotNull(result);
+        assertEquals(List.of(2, 29, 97), result.getIntegers());
+    }
+
+    @Test
+    public void testInvalidPrimeRank() {
+        ComputationHandler computation = new ComputationHandler();
+        IntegerData input = new IntegerDataset(List.of(0));
+
+        assertThrows(IllegalArgumentException.class, () -> computation.compute(input));
     }
 }
