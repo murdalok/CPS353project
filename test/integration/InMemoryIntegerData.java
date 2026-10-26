@@ -12,7 +12,8 @@ public class InMemoryIntegerData implements IntegerData {
         this.data = data;
     }
 
-    public List<Integer> getData() {
+    @Override
+    public List<Integer> getIntegers() {
         return data;
     }
 }
