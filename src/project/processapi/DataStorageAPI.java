@@ -1,6 +1,7 @@
 package project.processapi;
 
 import project.annotations.ProcessAPI;
+import project.networkapi.Delimiter;
 import project.networkapi.InputSource;
 import project.networkapi.OutputDestination;
 
@@ -9,5 +10,5 @@ public interface DataStorageAPI {
 
     IntegerData read(InputSource input);
 
-    void write(OutputDestination output, IntegerData data);
+    void write(OutputDestination output, IntegerData data, Delimiter delimiter);
 }

@@ -1,5 +1,7 @@
 package project.networkapi;
 
+import java.nio.file.Path;
+
 public interface OutputDestination {
-    // contract goes here
+    Path getPath();
 }
