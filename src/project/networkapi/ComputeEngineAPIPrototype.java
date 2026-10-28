@@ -10,12 +10,16 @@ public class ComputeEngineAPIPrototype {
     public void prototype(ComputeEngineAPI computeEngine) {
         InputSource  inputSource = new InputSource() {
             @Override
-            public Path getPath() {return null;}
+            public Path getPath() {
+                return null;
+            }
         };
 
         OutputDestination outputDestination = new OutputDestination() {
             @Override
-            public Path getPath() {return null;}
+            public Path getPath() {
+                return null;
+            }
         };
 
         Delimiter delimiter = new Delimiter() {
