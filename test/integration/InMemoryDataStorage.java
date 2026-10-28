@@ -19,8 +19,11 @@ public class InMemoryDataStorage implements DataStorageAPI {
     @Override
     public void write(OutputDestination output, IntegerData data, Delimiter delimiter) {
 
-        InMemoryOutputDestination destination = (InMemoryOutputDestination) output;
+        InMemoryOutputDestination destination =
+                (InMemoryOutputDestination) output;
 
-        InMemoryIntegerData integerData = (InMemoryIntegerData) data;
+        for (int number : data.getIntegers()) {
+            destination.getOutput().add(Integer.toString(number));
+        }
     }
 }

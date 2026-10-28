@@ -33,7 +33,7 @@ test {
 	filter {
 		//excludeTestsMatching("*TestComputationAPI")
 		//excludeTestsMatching("*TestComputeEngineAPI")
-		excludeTestsMatching("*TestDataStorageAPI")
-		excludeTestsMatching("*ComputeEngineIntegrationTest")
+		//excludeTestsMatching("*TestDataStorageAPI")
+		//excludeTestsMatching("*ComputeEngineIntegrationTest")
 	}
 }
