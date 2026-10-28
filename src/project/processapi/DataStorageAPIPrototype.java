@@ -15,11 +15,13 @@ public class DataStorageAPIPrototype {
     public void prototype(DataStorageAPI storage) {
         InputSource input = new InputSource() {
             @Override
-            public Path getPath() {return null;}};
+            public Path getPath() {return null;}
+        };
 
         OutputDestination output = new OutputDestination() {
             @Override
-            public Path getPath() {return null;}};
+            public Path getPath() {return null;}
+        };
 
         Delimiter delimiter = new Delimiter() {
             @Override
