@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import project.datastore.DataStorage;
+import project.networkapi.Delimiter;
 import project.networkapi.InputSource;
 import project.networkapi.OutputDestination;
 import project.processapi.IntegerData;
@@ -31,8 +32,10 @@ public class TestDataStorageAPI {
 
         IntegerData data = Mockito.mock(IntegerData.class);
 
+        Delimiter delimiter = Mockito.mock(Delimiter.class);
+
         DataStorage storage = new DataStorage();
 
-        storage.write(output, data);
+        storage.write(output, data, delimiter);
     }
 }

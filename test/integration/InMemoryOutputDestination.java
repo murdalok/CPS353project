@@ -2,6 +2,7 @@ package integration;
 
 import project.networkapi.OutputDestination;
 
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,5 +16,10 @@ public class InMemoryOutputDestination implements OutputDestination {
 
     public List<String> getOutput() {
         return output;
+    }
+
+    @Override
+    public Path getPath() {
+        return null;
     }
 }

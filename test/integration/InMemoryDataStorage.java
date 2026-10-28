@@ -1,5 +1,6 @@
 package integration;
 
+import project.networkapi.Delimiter;
 import project.networkapi.InputSource;
 import project.networkapi.OutputDestination;
 import project.processapi.DataStorageAPI;
@@ -16,7 +17,7 @@ public class InMemoryDataStorage implements DataStorageAPI {
     }
 
     @Override
-    public void write(OutputDestination output, IntegerData data) {
+    public void write(OutputDestination output, IntegerData data, Delimiter delimiter) {
 
         InMemoryOutputDestination destination = (InMemoryOutputDestination) output;
 

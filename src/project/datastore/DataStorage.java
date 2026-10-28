@@ -1,5 +1,6 @@
 package project.datastore;
 
+import project.networkapi.Delimiter;
 import project.networkapi.InputSource;
 import project.networkapi.OutputDestination;
 import project.processapi.DataStorageAPI;
@@ -13,7 +14,7 @@ public class DataStorage implements DataStorageAPI {
     }
 
     @Override
-    public void write(OutputDestination output, IntegerData data) {
+    public void write(OutputDestination output, IntegerData data, Delimiter delimiter) {
 
         // logic
     }
