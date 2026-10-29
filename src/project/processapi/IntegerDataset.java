@@ -1,6 +1,5 @@
-package project;
+package project.processapi;
 
-import project.processapi.IntegerData;
 import java.util.List;
 
 public class IntegerDataset implements IntegerData {

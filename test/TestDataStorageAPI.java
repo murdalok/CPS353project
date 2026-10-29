@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import org.mockito.Mockito;
-import project.datastore.DataStorage;
+import project.processapi.DataStorage;
 import project.networkapi.Delimiter;
 import project.networkapi.InputSource;
 import project.networkapi.OutputDestination;

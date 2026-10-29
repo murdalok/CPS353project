@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import project.conceptualapi.ComputationAPI;
-import project.jobhandler.JobHandler;
+import project.networkapi.JobHandler;
 import project.networkapi.Delimiter;
 import project.networkapi.InputSource;
 import project.networkapi.JobResponse;

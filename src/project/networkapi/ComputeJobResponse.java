@@ -1,7 +1,4 @@
-package project;
-
-import project.networkapi.JobResponse;
-import project.networkapi.JobResponseCode;
+package project.networkapi;
 
 public class ComputeJobResponse implements JobResponse {
     private final JobResponseCode code;
