@@ -1,5 +1,4 @@
-package project;
-import project.networkapi.Delimiter;
+package project.networkapi;
 
 public class ResultDelimiter implements Delimiter {
     private final String delimiter;

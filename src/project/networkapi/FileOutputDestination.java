@@ -1,6 +1,4 @@
-package project;
-
-import project.networkapi.OutputDestination;
+package project.networkapi;
 
 import java.nio.file.Path;
 

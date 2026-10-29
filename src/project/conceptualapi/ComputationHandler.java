@@ -1,8 +1,7 @@
-package project.computation;
+package project.conceptualapi;
 
-import project.conceptualapi.ComputationAPI;
 import project.processapi.IntegerData;
-import project.IntegerDataset;
+import project.processapi.IntegerDataset;
 import java.util.ArrayList;
 import java.util.List;
 

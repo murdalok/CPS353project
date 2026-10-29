@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import project.IntegerDataset;
-import project.computation.ComputationHandler;
+import project.processapi.IntegerDataset;
+import project.conceptualapi.ComputationHandler;
 import project.processapi.IntegerData;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;

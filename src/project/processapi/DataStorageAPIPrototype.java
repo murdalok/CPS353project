@@ -1,6 +1,5 @@
 package project.processapi;
 
-import project.IntegerDataset;
 import project.annotations.ProcessAPIPrototype;
 import project.networkapi.Delimiter;
 import project.networkapi.InputSource;

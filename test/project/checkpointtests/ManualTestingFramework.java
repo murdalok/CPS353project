@@ -1,14 +1,19 @@
 package project.checkpointtests;
 
-import project.FileInputSource;
-import project.FileOutputDestination;
-import project.ResultDelimiter;
-import project.computation.ComputationHandler;
-import project.datastore.DataStorage;
-import project.jobhandler.JobHandler;
-import project.processapi.IntegerData;
+import project.networkapi.FileInputSource;
+import project.networkapi.FileOutputDestination;
+import project.networkapi.ResultDelimiter;
+import project.conceptualapi.ComputationHandler;
+import project.conceptualapi.ComputationAPI;
+import project.processapi.DataStorage;
+import project.networkapi.JobHandler;
+import project.networkapi.ComputeEngineAPI;
+import project.networkapi.Delimiter;
+import project.networkapi.InputSource;
+import project.networkapi.JobResponse;
+import project.networkapi.OutputDestination;
+import project.processapi.DataStorageAPI;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ManualTestingFramework {
@@ -20,20 +25,17 @@ public class ManualTestingFramework {
         // TODO 1:
         // Instantiate a real (ie, class definition lives in the src/ folder) implementation 
         // of all 3 APIs
-        ComputationHandler computationHandler = new ComputationHandler();
-        DataStorage dataStorage = new DataStorage();
-        JobHandler jobHandler = new JobHandler(dataStorage, computationHandler);
+        ComputationAPI computationHandler = new ComputationHandler();
+        DataStorageAPI dataStorage = new DataStorage();
+        ComputeEngineAPI jobHandler = new JobHandler(dataStorage, computationHandler);
         //
         // TODO 2:
         // Run a computation with an input file of <root project dir>/manualTestInput.txt
         // and an output of <root project dir>/manualTestOutput.txt, with a delimiter of ','
-        ResultDelimiter delimiter = new ResultDelimiter(",");
-        Path inputPath = Paths.get(INPUT);
-        Path outputPath = Paths.get(OUTPUT);
-        FileInputSource inputSource = new FileInputSource(inputPath);
-        FileOutputDestination outputDestination = new FileOutputDestination(outputPath);
-        IntegerData result = computationHandler.compute(dataStorage.read(inputSource));
-        dataStorage.write(outputDestination, result, delimiter);
+        Delimiter delimiter = new ResultDelimiter(",");
+        InputSource inputSource = new FileInputSource(Paths.get(INPUT));
+        OutputDestination outputDestination = new FileOutputDestination(Paths.get(OUTPUT));
+        JobResponse response = jobHandler.submitJobRequest(inputSource, outputDestination, delimiter);
         //
         //
         // Helpful hint: the working directory of this program is <root project dir>,

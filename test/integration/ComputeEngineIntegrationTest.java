@@ -1,8 +1,8 @@
 package integration;
 
 import org.junit.jupiter.api.Test;
-import project.computation.ComputationHandler;
-import project.jobhandler.JobHandler;
+import project.conceptualapi.ComputationHandler;
+import project.networkapi.JobHandler;
 
 import java.util.List;
 
