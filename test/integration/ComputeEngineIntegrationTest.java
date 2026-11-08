@@ -7,7 +7,12 @@ import project.networkapi.JobHandler;
 import project.networkapi.JobResponse;
 import project.networkapi.ResultDelimiter;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class ComputeEngineIntegrationTest {
 
