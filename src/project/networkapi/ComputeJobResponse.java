@@ -9,16 +9,12 @@ public class ComputeJobResponse implements JobResponse {
         this.message = message;
     }
 
-    public JobResponseCode getCode() {
-        return code;
-    }
-
     public String getMessage() {
         return message;
     }
 
     @Override
     public JobResponseCode getResponseCode() {
-        return null;
+        return code;
     }
 }

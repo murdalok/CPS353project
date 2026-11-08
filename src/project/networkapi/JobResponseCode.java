@@ -3,9 +3,9 @@ package project.networkapi;
 public enum JobResponseCode {
     // response states for job
     SUCCESS(true),
-    FAILURE(true),
+    FAILURE(false),
     PENDING(false),
-    INVALID(true);
+    INVALID(false);
 
     private boolean success;
 

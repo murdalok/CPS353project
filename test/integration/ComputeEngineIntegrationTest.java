@@ -2,7 +2,9 @@ package integration;
 
 import org.junit.jupiter.api.Test;
 import project.conceptualapi.ComputationHandler;
+import project.networkapi.Delimiter;
 import project.networkapi.JobHandler;
+import project.networkapi.ResultDelimiter;
 
 import java.util.List;
 
@@ -27,8 +29,9 @@ public class ComputeEngineIntegrationTest {
 
         InMemoryOutputDestination output = new InMemoryOutputDestination();
 
-        // No delimiter specified
-        jobHandler.submitJobRequest(input, output, null);
+        Delimiter delimiter = new ResultDelimiter();
+
+        jobHandler.submitJobRequest(input, output, delimiter);
 
         assertEquals(List.of("2", "29", "97"), output.getOutput());
     }
