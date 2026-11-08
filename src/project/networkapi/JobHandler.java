@@ -33,17 +33,13 @@ public class JobHandler implements ComputeEngineAPI {
             this.storage.write(outputDestination, result, delimiter);
 
             return new ComputeJobResponse(JobResponseCode.SUCCESS, "Job completed successfully");
-        }
-        catch (UncheckedIOException e) {
+        } catch (UncheckedIOException e) {
             return new ComputeJobResponse(JobResponseCode.FAILURE, "File operation failed: " + e.getMessage());
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             return new ComputeJobResponse(JobResponseCode.FAILURE, "Invalid input: " + e.getMessage());
-        }
-        catch (ArithmeticException e) {
+        } catch (ArithmeticException e) {
             return new ComputeJobResponse(JobResponseCode.FAILURE, "Computation failed: " + e.getMessage());
-        }
-        catch (RuntimeException e) {
+        } catch (RuntimeException e) {
             return new ComputeJobResponse(JobResponseCode.FAILURE, "An unexpected error occurred while processing the job");
         }
     }
