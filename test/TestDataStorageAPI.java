@@ -12,8 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestDataStorageAPI {
 
@@ -56,5 +55,13 @@ public class TestDataStorageAPI {
         storage.write(output, data, delimiter);
 
         assertEquals("2;29;97", Files.readString(outputPath));
+    }
+
+    @Test
+    public void testReadMissingFile(@TempDir Path tempDir) {
+        InputSource input = Mockito.mock(InputSource.class);
+        Mockito.when(input.getPath()).thenReturn(tempDir.resolve("nope.txt"));
+
+        assertThrows(IllegalArgumentException.class, () -> new DataStorage().read(input));
     }
 }

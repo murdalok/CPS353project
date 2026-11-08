@@ -5,9 +5,11 @@ import project.networkapi.JobHandler;
 import project.networkapi.Delimiter;
 import project.networkapi.InputSource;
 import project.networkapi.JobResponse;
+import project.networkapi.JobResponseCode;
 import project.networkapi.OutputDestination;
 import project.processapi.DataStorageAPI;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class TestComputeEngineAPI {
@@ -30,5 +32,19 @@ public class TestComputeEngineAPI {
         JobResponse response = jobHandler.submitJobRequest(inputSource, outputDestination, delimiter);
 
         assertNotNull(response);
+    }
+
+    @Test
+    public void testNullInputSourceReturnsInvalid() {
+        DataStorageAPI storage = Mockito.mock(DataStorageAPI.class);
+        ComputationAPI computation = Mockito.mock(ComputationAPI.class);
+        OutputDestination outputDestination = Mockito.mock(OutputDestination.class);
+        Delimiter delimiter = Mockito.mock(Delimiter.class);
+
+        JobHandler jobHandler = new JobHandler(storage, computation);
+
+        JobResponse response = jobHandler.submitJobRequest(null, outputDestination, delimiter);
+
+        assertEquals(JobResponseCode.INVALID, response.getResponseCode());
     }
 }
