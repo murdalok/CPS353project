@@ -25,4 +25,10 @@ public class TestComputationAPI {
         IntegerData input = new IntegerDataset(List.of(0));
         assertThrows(IllegalArgumentException.class, () -> computation.compute(input));
     }
+
+    @Test
+    public void testComputeNullInput() {
+        ComputationHandler computation = new ComputationHandler();
+        assertThrows(NullPointerException.class, () -> computation.compute(null));
+    }
 }
